@@ -1,14 +1,14 @@
 \section{Shingled Magnetic Recording}
 
-Shingled Magnetic Recording (SMR) is one of the latest technique of magnetic recording to increase the aerial density up to 10Tb/in$^2$. Without much change in the current design of hard disks read and write heads, SMR provides a way to achieve this increased aerial density. SMR writes and reads sequentially. It is not an optimal solution for update-in-place. For writing in SMR, the write head starts writing the track sequentially thereby overlapping the previously written track. It can be imagined as a house with roof top shingles. In SMR several tracks are grouped under a band, so in order to  perform update-in-place, bands are read intially until that point then update takes place by sequentially overriding the tracks until the end of the band. SMR can be efficiently used for the use cases which involves sequential read and write operation with less of updates. Following are some example use cases.
-\itemize
-\item Back ups
+Shingled Magnetic Recording (SMR) is one of the latest technique of magnetic recording to increase the aerial density up to 10Tb/in$^2$. Without much change in the current design of hard disks read and write heads, SMR provides a way to achieve this increased aerial density. SMR writes and reads sequentially. It is not an optimal solution for update-in-place. For writing in SMR, the write head starts writing the track sequentially thereby overlapping the previously written track. It can be imagined as a house with roof top shingles. In SMR several tracks are grouped under a band, so in order to  perform update-in-place, bands are read initially until that point then update takes place by sequentially overriding the tracks until the end of the band. SMR can be efficiently used for the use cases which involves sequential read and write operation with less of updates. Following are some example use cases.
+\begin{itemize}
+\item Backups
 \item CCTV recording
 \item DNA models in the medical fields
-\end
+\end{itemize}
 
 Since SMR writes overlap with the previous track, it might slow down the writing process. SMR can be classified as below, which helps in mitigating the problem
-\itemize
+\begin{itemize}
 \item Drive Managed SMR - It uses a firmware to mitigate the slowness of writing.
 \item Host Managed SMR - The operating system needs to know how to handle the situation based on the needs.
-\end
+\end{itemize}
