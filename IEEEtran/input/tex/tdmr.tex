@@ -1,0 +1,12 @@
+\section{Two-Dimensional read-back}
+TDMR architecture also helps to achieve the increased aerial density of 10Tb/in$^2$. It is the combination of Shingled writing and the two dimensional readback.~\cite{IEEE_HITACHI} Since the Shingled writing writes by overlapping the previously written track, it is quite challenging to read back. The conventional read for the shingled writing is more erroneous because of Inter-track Interference (ITI). So for SMR Writing, 2D readback is used to minimise the ITI. TDMR uses the whole of 2D array bits in different track as a single unit. This can be achieved by the following ways.
+\begin{itemize}
+	\item Allowing multiple passes using single read head.
+	\item Using array of read heads.
+\end{itemize}
+
+Using single read head for each pass the readback is stored in the memory. After storing all the readback for each pass then processing of the data can be done. So it would increase memory and also would considerably increase the latency. On the other hand by using multiple read heads parallel readbacks can be stored in the memory and can be processed with less latency than the single head.~\cite{Elidrissi}
+
+
+
+
